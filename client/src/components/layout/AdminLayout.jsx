@@ -114,7 +114,7 @@ function AdminLayout({ children }) {
                 !open && "rotate-[360deg] scale-0"
               }`}
             >
-              Codeverse
+              Codsify
             </h1>
           </div>
           <ul>
