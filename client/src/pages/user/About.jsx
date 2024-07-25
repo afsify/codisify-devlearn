@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { Button, Progress, Card } from "antd";
 import { useDispatch } from "react-redux";
 import { useState, useEffect } from "react";
+import { Button, Progress, Card } from "antd";
 import imageLinks from "../../assets/images/imageLinks";
 import { getAbout } from "../../api/services/userService";
 import UserLayout from "../../components/layout/UserLayout";
