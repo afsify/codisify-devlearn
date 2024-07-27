@@ -24,7 +24,7 @@ const DevBoard = () => {
       label,
     };
   }
-  
+
   const items = [
     getItem("Option 1", "1", <PieChartOutlined />),
     getItem("Option 2", "2", <DesktopOutlined />),
