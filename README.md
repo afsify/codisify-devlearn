@@ -36,14 +36,14 @@ Welcome to the Codisify DevLearn project! This platform is designed to a freelan
 
 ## Access the live project
 
-The live project can be accessed at [https://codsify.vercel.app](https://codsify.vercel.app)
+The live project can be accessed at [https://codisify.vercel.app](https://codisify.vercel.app)
 
 ## Getting Started
 
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/afsify/codsify-devlearn.git
+   git clone https://github.com/afsify/codisify-devlearn.git
    ```
 
 2. **Set up environment variables:**
