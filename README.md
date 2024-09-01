@@ -1,6 +1,6 @@
-# Codisify DevLearn
+# Codisify Devlearn
 
-Welcome to the Codisify DevLearn project! This platform is designed to a freelancer offers his services, provide courses, and establish connections between developers and users. Prime members enjoy additional benefits such as support group chat, personal support, meeting sessions, and a Prime Badge. The Codisify DevLearn project ensures flawless functionality with a captivating design, delivering a smooth experience across all devices.
+Welcome to the Codisify Devlearn project! This platform is designed to a freelancer offers his services, provide courses, and establish connections between developers and users. Prime members enjoy additional benefits such as support group chat, personal support, meeting sessions, and a Prime Badge. The Codisify Devearn project ensures flawless functionality with a captivating design, delivering a smooth experience across all devices.
 
 ## Features
 
