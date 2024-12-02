@@ -135,12 +135,9 @@ function Profile() {
                     </div>
                   ) : (
                     <Image
-                      className="object-cover"
+                      className="overflow-hidden rounded-full w-full h-full mx-auto shadow-md shadow-black "
                       cloudName={import.meta.env.VITE_CLOUD_NAME}
                       publicId={image}
-                      width="auto"
-                      height="150"
-                      crop="scale"
                       alt="Profile"
                     />
                   )}
