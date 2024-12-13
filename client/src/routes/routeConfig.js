@@ -27,6 +27,7 @@ export const userPath = {
   register: "/register",
   messages: "/messages",
   resetOTP: "/reset-otp",
+  developer: "/developer",
   registerOTP: "/register-otp",
   courseDetail: "/course-detail",
   resetPassword: "/reset-password",

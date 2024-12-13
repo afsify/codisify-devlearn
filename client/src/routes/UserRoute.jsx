@@ -20,6 +20,7 @@ const Discover = lazy(() => import("../pages/user/Discover"));
 const Register = lazy(() => import("../pages/user/Register"));
 const Messages = lazy(() => import("../pages/user/Messages"));
 const ResetOTP = lazy(() => import("../pages/user/ResetOTP"));
+const Developer = lazy(() => import("../pages/user/Developer"));
 const RegisterOTP = lazy(() => import("../pages/user/RegisterOTP"));
 const ResetPassword = lazy(() => import("../pages/user/ResetPassword"));
 const ForgotPassword = lazy(() => import("../pages/user/ForgotPassword"));
@@ -45,6 +46,7 @@ function UserRoute() {
       <Route path={userPath.service} element={<Service />} />
       <Route path={userPath.contact} element={<Contact />} />
       <Route path={userPath.discover} element={<Discover />} />
+      <Route path={userPath.developer} element={<Developer />} />
       <Route path={userPath.courseDetail} element={<CourseDetail />} />
       <Route element={<PrivateRoute role={"user"} route={userPath.home} />}>
         <Route path={userPath.library} element={<Library />} />

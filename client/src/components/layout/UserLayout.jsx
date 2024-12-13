@@ -51,11 +51,11 @@ const UserLayout = ({ children, showFooter = true }) => {
       name: "Contact",
       path: userPath.contact,
     },
-    {
-      id: 5,
-      name: "About",
-      path: userPath.about,
-    },
+    // {
+    //   id: 5,
+    //   name: "About",
+    //   path: userPath.about,
+    // },
   ];
 
   return (

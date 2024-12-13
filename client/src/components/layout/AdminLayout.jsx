@@ -105,7 +105,7 @@ function AdminLayout({ children }) {
           <LeftCircleFilled
             style={{ fontSize: "35px", color: "#081A51" }}
             className={`absolute bg-white hover:scale-105 transition-transform cursor-pointer -right-4 top-12
-           border-2 rounded-full ${!open && "rotate-180"}`}
+            border-2 rounded-full ${!open && "rotate-180"}`}
             onClick={() => setOpen(!open)}
           />
           <div className="mt-3">
