@@ -1,7 +1,7 @@
 function Developer() {
   return (
     <div>
-      <h1>Developer Page</h1>
+      <h1>Developer</h1>
     </div>
   );
 }
