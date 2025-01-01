@@ -89,8 +89,26 @@ const discoverDev = async (req, res, next) => {
   }
 };
 
+//! =========================================== Get Developer ===========================================
+
+const getDev = async (req, res, next) => {
+  try {
+    const { devId } = req.params;
+    const developer = await developerModel.findById(devId).populate("user");
+    res.status(200).send({
+      message: "Developer Fetched Successfully",
+      success: true,
+      data: developer,
+    });
+  } catch (error) {
+    res.status(500).json({ success: false, message: "Error Occurred" });
+    next(error);
+  }
+};
+
 module.exports = {
   createDev,
   listDev,
   discoverDev,
+  getDev,
 };

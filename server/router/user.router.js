@@ -36,6 +36,7 @@ user_router.get("/list-service", userController.listService);
 user_router.post("/create-dev", userAuth, devhubController.createDev);
 user_router.get("/list-dev", userAuth, devhubController.listDev);
 user_router.get("/discover-dev", devhubController.discoverDev);
+user_router.get("/get-dev/:devId", devhubController.getDev);
 
 //? ================================================ Course ================================================
 
@@ -72,7 +73,11 @@ user_router.put("/group-add", userAuth, chatController.groupAdd);
 
 //? ================================================ Message ================================================
 
-user_router.get("/list-message/:chatId", userAuth, messageController.listMessage);
+user_router.get(
+  "/list-message/:chatId",
+  userAuth,
+  messageController.listMessage
+);
 user_router.post("/send-message", userAuth, messageController.sendMessage);
 
 module.exports = user_router;

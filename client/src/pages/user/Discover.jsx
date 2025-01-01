@@ -153,7 +153,7 @@ function Discover() {
           </div>
           <div className="flex justify-between">
             <Title className="uppercase" level={3}>
-            Developers
+              Developers
             </Title>
             <div className="flex items-center">
               <Input
@@ -192,6 +192,11 @@ function Discover() {
               {paginatedDevs.map((dev) => (
                 <Card
                   key={dev?._id}
+                  onClick={() =>
+                    navigate(`${userPath.developer}`, {
+                      state: { dev },
+                    })
+                  }
                   className="shadow-lg cursor-pointer hover:scale-105 duration-300 rounded-lg md:w-80 mx-auto mt-3"
                 >
                   <div className="flex items-center justify-between pb-3 border-b-2">

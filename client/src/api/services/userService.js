@@ -64,6 +64,10 @@ export const discoverDev = () => {
   return userAxiosInstance.get("/discover-dev");
 };
 
+export const getDev = (devId) => {
+  return userAxiosInstance.get(`/get-dev/${devId}`);
+};
+
 //? ================================================ Course ================================================
 
 export const listCourse = () => {
