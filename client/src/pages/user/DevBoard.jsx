@@ -82,10 +82,6 @@ const DevBoard = () => {
             <h2 className="text-xl font-semibold text-gray-800">
               Welcome to DevBoard
             </h2>
-            <p className="text-gray-600">
-              Navigate through the options on the left to explore your
-              dashboard.
-            </p>
           </div>
         </div>
       </Card>
