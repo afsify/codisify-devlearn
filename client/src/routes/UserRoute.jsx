@@ -25,6 +25,7 @@ const Developer = lazy(() => import("../pages/user/Developer"));
 const RegisterOTP = lazy(() => import("../pages/user/RegisterOTP"));
 const CourseManage = lazy(() => import("../pages/dev/CourseManage"));
 const CourseDetail = lazy(() => import("../pages/user/CourseDetail"));
+const ProjectManage = lazy(() => import("../pages/dev/ProjectManage"));
 const ResetPassword = lazy(() => import("../pages/user/ResetPassword"));
 const ForgotPassword = lazy(() => import("../pages/user/ForgotPassword"));
 
@@ -54,9 +55,10 @@ function UserRoute() {
         <Route path={userPath.library} element={<Library />} />
         <Route path={userPath.profile} element={<Profile />} />
         <Route path={userPath.devBoard} element={<DevBoard />} />
-        <Route path={userPath.dashboard} element={<Dashboard />} />
         <Route path={userPath.messages} element={<Messages />} />
+        <Route path={userPath.dashboard} element={<Dashboard />} />
         <Route path={userPath.courseManage} element={<CourseManage />} />
+        <Route path={userPath.projectManage} element={<ProjectManage />} />
       </Route>
     </Routes>
   );

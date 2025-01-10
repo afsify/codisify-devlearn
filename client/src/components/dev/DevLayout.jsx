@@ -2,8 +2,9 @@ import { Layout } from "antd";
 import { useState } from "react";
 import { Card, Menu } from "antd";
 import PropTypes from "prop-types";
-import { Link, useLocation } from "react-router-dom";
 import UserLayout from "../layout/UserLayout";
+import { userPath } from "../../routes/routeConfig";
+import { useLocation, useNavigate } from "react-router-dom";
 import {
   DesktopOutlined,
   PieChartOutlined,
@@ -12,36 +13,47 @@ import {
   SettingOutlined,
   VideoCameraOutlined,
 } from "@ant-design/icons";
-import { userPath } from "../../routes/routeConfig";
 
 const { Sider } = Layout;
 
 const DevLayout = ({ children }) => {
   const [collapsed, setCollapsed] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const items = [
     {
-      key: 1,
+      key: "1",
       icon: <SettingOutlined />,
-      label: <Link to={userPath.devBoard}>DevBoard</Link>,
+      label: "DevBoard",
+      path: userPath.devBoard,
     },
     {
-      key: 2,
+      key: "2",
       icon: <PieChartOutlined />,
-      label: <Link to={userPath.devBoard}>Dashboard</Link>,
+      label: "Dashboard",
+      path: userPath.dashboard,
     },
     {
-      key: 3,
+      key: "3",
       icon: <DesktopOutlined />,
-      label: <Link to={userPath.devBoard}>Projects</Link>,
+      label: "Projects",
+      path: userPath.projectManage,
     },
     {
-      key: 4,
+      key: "4",
       icon: <VideoCameraOutlined />,
-      label: <Link to={userPath.devBoard}>Courses</Link>,
+      label: "Courses",
+      path: userPath.courseManage,
     },
   ];
+
+  const handleMenuClick = (e) => {
+    const selectedItem = items.find((item) => item.key === e.key);
+    if (selectedItem) {
+      navigate(selectedItem.path);
+    }
+  };
 
   return (
     <UserLayout>
@@ -79,8 +91,13 @@ const DevLayout = ({ children }) => {
             </div>
             <Menu
               selectedKeys={[location.pathname]}
+              onClick={handleMenuClick}
               mode="inline"
-              items={items}
+              items={items.map(({ key, icon, label }) => ({
+                key,
+                icon,
+                label,
+              }))}
               style={{
                 border: "none",
                 color: "#fff",
