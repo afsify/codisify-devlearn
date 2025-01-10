@@ -15,16 +15,18 @@ const Service = lazy(() => import("../pages/user/Service"));
 const Contact = lazy(() => import("../pages/user/Contact"));
 const Library = lazy(() => import("../pages/user/Library"));
 const Profile = lazy(() => import("../pages/user/Profile"));
-const DevBoard = lazy(() => import("../pages/user/DevBoard"));
+const DevBoard = lazy(() => import("../pages/dev/DevBoard"));
 const Discover = lazy(() => import("../pages/user/Discover"));
 const Register = lazy(() => import("../pages/user/Register"));
 const Messages = lazy(() => import("../pages/user/Messages"));
 const ResetOTP = lazy(() => import("../pages/user/ResetOTP"));
+const Dashboard = lazy(() => import("../pages/dev/Dashboard"));
 const Developer = lazy(() => import("../pages/user/Developer"));
 const RegisterOTP = lazy(() => import("../pages/user/RegisterOTP"));
+const CourseManage = lazy(() => import("../pages/dev/CourseManage"));
+const CourseDetail = lazy(() => import("../pages/user/CourseDetail"));
 const ResetPassword = lazy(() => import("../pages/user/ResetPassword"));
 const ForgotPassword = lazy(() => import("../pages/user/ForgotPassword"));
-const CourseDetail = lazy(() => import("../pages/user/CourseDetail"));
 
 function UserRoute() {
   return (
@@ -42,7 +44,7 @@ function UserRoute() {
       <Route path={userPath.home} element={<Home />} />
       <Route path={userPath.about} element={<About />} />
       <Route path={userPath.course} element={<Course />} />
-      <Route path={userPath.devhub} element={<DevHub />} />
+      <Route path={userPath.devHub} element={<DevHub />} />
       <Route path={userPath.service} element={<Service />} />
       <Route path={userPath.contact} element={<Contact />} />
       <Route path={userPath.discover} element={<Discover />} />
@@ -51,8 +53,10 @@ function UserRoute() {
       <Route element={<PrivateRoute role={"user"} route={userPath.home} />}>
         <Route path={userPath.library} element={<Library />} />
         <Route path={userPath.profile} element={<Profile />} />
-        <Route path={userPath.devboard} element={<DevBoard />} />
+        <Route path={userPath.devBoard} element={<DevBoard />} />
+        <Route path={userPath.dashboard} element={<Dashboard />} />
         <Route path={userPath.messages} element={<Messages />} />
+        <Route path={userPath.courseManage} element={<CourseManage />} />
       </Route>
     </Routes>
   );

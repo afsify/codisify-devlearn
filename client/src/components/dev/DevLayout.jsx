@@ -1,41 +1,52 @@
 import { Layout } from "antd";
 import { useState } from "react";
 import { Card, Menu } from "antd";
-import UserLayout from "../../components/layout/UserLayout";
+import PropTypes from "prop-types";
+import { Link, useLocation } from "react-router-dom";
+import UserLayout from "../layout/UserLayout";
 import {
-  FileOutlined,
   DesktopOutlined,
   PieChartOutlined,
   MenuUnfoldOutlined,
   MenuFoldOutlined,
+  SettingOutlined,
+  VideoCameraOutlined,
 } from "@ant-design/icons";
+import { userPath } from "../../routes/routeConfig";
 
 const { Sider } = Layout;
 
-const DevBoard = () => {
+const DevLayout = ({ children }) => {
   const [collapsed, setCollapsed] = useState(false);
-
-  function getItem(label, key, icon, children) {
-    return {
-      key,
-      icon,
-      children,
-      label,
-    };
-  }
+  const location = useLocation();
 
   const items = [
-    getItem("Dashboard", "1", <PieChartOutlined />),
-    getItem("Projects", "2", <DesktopOutlined />),
-    getItem("Files", "3", <FileOutlined />),
+    {
+      key: 1,
+      icon: <SettingOutlined />,
+      label: <Link to={userPath.devBoard}>DevBoard</Link>,
+    },
+    {
+      key: 2,
+      icon: <PieChartOutlined />,
+      label: <Link to={userPath.devBoard}>Dashboard</Link>,
+    },
+    {
+      key: 3,
+      icon: <DesktopOutlined />,
+      label: <Link to={userPath.devBoard}>Projects</Link>,
+    },
+    {
+      key: 4,
+      icon: <VideoCameraOutlined />,
+      label: <Link to={userPath.devBoard}>Courses</Link>,
+    },
   ];
 
   return (
     <UserLayout>
       <Card
-        title={
-          <h1 className="text-2xl font-semibold">DevBoard</h1>
-        }
+        title={<h1 className="text-2xl font-semibold">DevBoard</h1>}
         className="w-full mx-auto md:px-5 pt-4 shadow-lg rounded-lg"
       >
         <div className="flex">
@@ -67,7 +78,7 @@ const DevBoard = () => {
               )}
             </div>
             <Menu
-              defaultSelectedKeys={["1"]}
+              selectedKeys={[location.pathname]}
               mode="inline"
               items={items}
               style={{
@@ -78,15 +89,15 @@ const DevBoard = () => {
               }}
             />
           </Sider>
-          <div className="p-6 flex-grow">
-            <h2 className="text-xl font-semibold">
-              Welcome to DevBoard
-            </h2>
-          </div>
+          <div className="p-6 flex-grow">{children}</div>
         </div>
       </Card>
     </UserLayout>
   );
 };
 
-export default DevBoard;
+DevLayout.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default DevLayout;

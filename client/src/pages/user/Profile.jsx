@@ -264,17 +264,16 @@ function Profile() {
               </Form>
             </div>
           </div>
-          
-        <Button
-          onClick={() => navigate(userPath.devboard)}
-          style={{
-            backgroundColor: "transparent",
-          }}
-          size="large"
-          className="my-3 md:my-0 font-semibold"
-        >
-          DevBoard
-        </Button>
+          <Button
+            onClick={() => navigate(userPath.devBoard)}
+            style={{
+              backgroundColor: "transparent",
+            }}
+            size="large"
+            className="my-3 md:my-0 font-semibold"
+          >
+            DevBoard
+          </Button>
         </Card>
       </motion.section>
     </UserLayout>
