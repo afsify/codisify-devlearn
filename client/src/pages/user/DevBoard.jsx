@@ -34,9 +34,9 @@ const DevBoard = () => {
     <UserLayout>
       <Card
         title={
-          <h1 className="text-2xl font-semibold text-gray-800">DevBoard</h1>
+          <h1 className="text-2xl font-semibold">DevBoard</h1>
         }
-        className="w-full mx-auto md:px-5 pt-4 shadow-lg bg-white rounded-lg"
+        className="w-full mx-auto md:px-5 pt-4 shadow-lg rounded-lg"
       >
         <div className="flex">
           <Sider
@@ -79,7 +79,7 @@ const DevBoard = () => {
             />
           </Sider>
           <div className="p-6 flex-grow">
-            <h2 className="text-xl font-semibold text-gray-800">
+            <h2 className="text-xl font-semibold">
               Welcome to DevBoard
             </h2>
           </div>
