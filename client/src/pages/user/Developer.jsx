@@ -13,7 +13,7 @@ import {
   InstagramOutlined,
   EnvironmentOutlined,
 } from "@ant-design/icons";
-import useFetch from "../../hooks/useFetch";
+import useGet from "../../hooks/useGet";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -21,7 +21,7 @@ function Developer() {
   const location = useLocation();
   const devId = location?.state?.dev?._id;
 
-  const { data: developer, setArgs } = useFetch(getDev, devId);
+  const { data: developer, setArgs } = useGet(getDev, devId);
 
   useEffect(() => {
     setArgs(devId);
@@ -126,8 +126,7 @@ function Developer() {
                 <motion.a
                   variants={fadeInUpTag}
                   href={
-                    developer?.linkedin ||
-                    "https://linkedin.com/in/example"
+                    developer?.linkedin || "https://linkedin.com/in/example"
                   }
                   target="_blank"
                   rel="noopener noreferrer"
@@ -140,9 +139,7 @@ function Developer() {
                 </motion.a>
                 <motion.a
                   variants={fadeInUpTag}
-                  href={
-                    developer?.github || "https://github.com/example"
-                  }
+                  href={developer?.github || "https://github.com/example"}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group hover:scale-125 duration-300 hover:text-[#9e5eb8]"
@@ -155,8 +152,7 @@ function Developer() {
                 <motion.a
                   variants={fadeInUpTag}
                   href={
-                    developer?.youtube ||
-                    "https://www.youtube.com/@example"
+                    developer?.youtube || "https://www.youtube.com/@example"
                   }
                   target="_blank"
                   rel="noopener noreferrer"
@@ -169,9 +165,7 @@ function Developer() {
                 </motion.a>
                 <motion.a
                   variants={fadeInUpTag}
-                  href={
-                    developer?.whatsapp || "https://wa.me/1234567890"
-                  }
+                  href={developer?.whatsapp || "https://wa.me/1234567890"}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group hover:scale-125 duration-300 hover:text-[#119e06]"
