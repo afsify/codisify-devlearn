@@ -19,7 +19,6 @@ function Banner() {
       } catch (error) {
         console.error("Error fetching banners:", error);
         setBanners([]);
-        fetchBanners();
       }
     };
     fetchBanners();
