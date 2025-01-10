@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 
-const useFetch = (apiFunction) => {
+const useGet = (apiFunction, params = null) => {
   const [data, setData] = useState([]);
+  const [args, setArgs] = useState(params);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await apiFunction();
+        const response = await apiFunction(args);
         const responseData = response.data.data;
         setData(responseData);
       } catch (error) {
@@ -14,10 +15,13 @@ const useFetch = (apiFunction) => {
         setData([]);
       }
     };
-    fetchData();
-  }, [apiFunction]);
 
-  return { data, setData };
+    if (args !== null) {
+      fetchData();
+    }
+  }, [apiFunction, args]);
+
+  return { data, setData, setArgs };
 };
 
-export default useFetch;
+export default useGet;

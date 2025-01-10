@@ -199,7 +199,7 @@ function BannerManage() {
         />
       </div>
       <BannerForm
-        visible={isModalVisible}
+        open={isModalVisible}
         onCreate={editData ? editBannerHandler : insertBannerHandler}
         onCancel={handleCancel}
         editData={editData}

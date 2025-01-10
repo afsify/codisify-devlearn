@@ -5,7 +5,7 @@ import { cloudUpload } from "../../api/cloudinary";
 import { FileImageOutlined } from "@ant-design/icons";
 import { Button, Modal, Form, Input, Upload } from "antd";
 
-function BannerForm({ visible, onCreate, onCancel, editData }) {
+function BannerForm({ open, onCreate, onCancel, editData }) {
   const [form] = Form.useForm();
   const [imageUrl, setImageUrl] = useState("");
   const [uploading, setUploading] = useState(false);
@@ -94,13 +94,13 @@ function BannerForm({ visible, onCreate, onCancel, editData }) {
 
   return (
     <Modal
-      visible={visible}
+      open={open}
       title={editData ? "Edit Banner" : "Add Banner"}
       okText={editData ? "Save" : "Create"}
       cancelText="Cancel"
       onCancel={onCancel}
       onOk={handleSubmit}
-      cancelButtonProps={{ style: { color: 'white' } }}
+      cancelButtonProps={{ style: { color: "white" } }}
     >
       <Upload.Dragger
         customRequest={({ file }) => handleUpload(file)}
@@ -137,7 +137,7 @@ function BannerForm({ visible, onCreate, onCancel, editData }) {
 }
 
 BannerForm.propTypes = {
-  visible: PropTypes.bool.isRequired,
+  open: PropTypes.bool.isRequired,
   onCreate: PropTypes.func.isRequired,
   onCancel: PropTypes.func.isRequired,
   editData: PropTypes.object,
