@@ -19,22 +19,16 @@ const developerSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    github: {
-      type: String,
-      required: true,
-    },
-    linkedin: {
-      type: String,
-      required: true,
-    },
-    youtube: String,
-    whatsapp: String,
-    instagram: String,
-    resume: String,
-    address: String,
     status: {
       type: String,
       default: "requested",
+    },
+    address: String,
+    contact: {
+      linkedIn: String,
+      github: String,
+      youtube: String,
+      instagram: String,
     },
     education: [
       {
