@@ -6,7 +6,6 @@ import useToggle from "../../hooks/useToggle";
 import useDelete from "../../hooks/useDelete";
 import Title from "../../components/admin/Title";
 import CourseForm from "../../components/admin/CourseForm";
-import AdminLayout from "../../components/layout/AdminLayout";
 import DeleteConfirm from "../../components/admin/DeleteConfirm";
 import { Button, Empty, Switch, Table, Input, Collapse, Badge } from "antd";
 import {
@@ -247,7 +246,7 @@ function CourseManage() {
   ];
 
   return (
-    <AdminLayout>
+    <>
       <Title>
         <h2 className="text-xl font-semibold">Courses</h2>
         <Button className="text-white flex items-center" onClick={showModal}>
@@ -280,7 +279,7 @@ function CourseManage() {
         onCancel={handleCancel}
         editData={editData}
       />
-    </AdminLayout>
+    </>
   );
 }
 
