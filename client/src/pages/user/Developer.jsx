@@ -1,11 +1,10 @@
-import { motion } from "framer-motion";
 import { Progress, Card } from "antd";
+import { motion } from "framer-motion";
 import imageLinks from "../../assets/images/imageLinks";
 import { getDev } from "../../api/services/userService";
 import UserLayout from "../../components/layout/UserLayout";
 import {
   MailOutlined,
-  PhoneOutlined,
   GithubOutlined,
   YoutubeOutlined,
   WhatsAppOutlined,
@@ -94,17 +93,6 @@ function Developer() {
                     <MailOutlined />
                   </a>
                   {developer?.user?.email}
-                </p>
-                <p className="text-gray-500 font-sans mb-1">
-                  <a
-                    className="me-2 hover:text-blue-500"
-                    href={`tel:${developer?.user?.phone}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <PhoneOutlined />
-                  </a>
-                  {developer?.phone}
                 </p>
                 <p className="text-gray-500 font-sans max-w-[250px] mb-4">
                   <a
