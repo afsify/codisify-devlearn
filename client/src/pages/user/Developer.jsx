@@ -122,7 +122,7 @@ function Developer() {
                 >
                   <LinkedinOutlined style={{ fontSize: "40px" }} />
                   <p className="hidden text-[9px] text-center group-hover:grid font-semibold font-sans">
-                    {/* {getUserId(developer.contact?.linkedIn, "/")} */}
+                    {/* {getUserId(developer?.linkedIn, "/")} */}
                   </p>
                 </motion.a>
                 <motion.a
