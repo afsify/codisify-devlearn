@@ -148,7 +148,7 @@ function Developer() {
                 >
                   <YoutubeOutlined style={{ fontSize: "40px" }} />
                   <p className="hidden text-[9px] text-center group-hover:grid font-semibold font-sans">
-                    {/* {getUserId(developer.contact?.youtube, "/")} */}
+                    {/* {getUserId(developer?.youtube, "/")} */}
                   </p>
                 </motion.a>
                 <motion.a
