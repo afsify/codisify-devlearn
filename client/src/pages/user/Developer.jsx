@@ -160,7 +160,7 @@ function Developer() {
                 >
                   <WhatsAppOutlined style={{ fontSize: "40px" }} />
                   <a className="hidden text-[5px] text-center group-hover:grid font-semibold font-sans">
-                    {/* {getUserId(developer.contact?.whatsapp, "/")} */}
+                    {/* {getUserId(developer?.whatsapp, "/")} */}
                   </a>
                 </motion.a>
                 <motion.a
