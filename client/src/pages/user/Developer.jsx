@@ -175,7 +175,7 @@ function Developer() {
                 >
                   <InstagramOutlined style={{ fontSize: "40px" }} />
                   <p className="hidden text-[9px] text-center group-hover:grid font-semibold font-sans">
-                    {/* {getUserId(developer.contact?.instagram, "/")} */}
+                    {/* {getUserId(developer?.instagram, "/")} */}
                   </p>
                 </motion.a>
               </motion.div>
