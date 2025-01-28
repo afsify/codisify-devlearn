@@ -87,7 +87,7 @@ function Login() {
       if (error.response && error.response.data.message) {
         toast.error(error.response.data.message);
       } else {
-        toast.error("Something went wrong!");
+        toast.error("Something went wrong");
       }
     }
   };
