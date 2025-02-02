@@ -4,7 +4,7 @@ import useFetch from "../../hooks/useFetch";
 import useInsert from "../../hooks/useInsert";
 import useToggle from "../../hooks/useToggle";
 import useDelete from "../../hooks/useDelete";
-import Title from "../../components/admin/Title";
+import DevLayout from "../../components/dev/DevLayout";
 import CourseForm from "../../components/admin/CourseForm";
 import DeleteConfirm from "../../components/admin/DeleteConfirm";
 import { Button, Empty, Switch, Table, Input, Collapse, Badge } from "antd";
@@ -246,16 +246,22 @@ function CourseManage() {
   ];
 
   return (
-    <>
-      <Title>
-        <h2 className="text-xl font-semibold">Courses</h2>
-        <Button className="text-white flex items-center" onClick={showModal}>
-          <PlusCircleOutlined />
-          Add Course
-        </Button>
-      </Title>
-      <div className="overflow-x-auto mt-5">
+    <DevLayout>
+      <div className="overflow-x-auto">
         <Table
+          title={() => (
+            <div className="flex justify-between items-center">
+              <h2 className="text-lg font-semibold">Courses</h2>
+              <Button
+                type="primary"
+                className="text-white flex items-center"
+                onClick={showModal}
+              >
+                <PlusCircleOutlined />
+                Add Course
+              </Button>
+            </div>
+          )}
           dataSource={filteredData}
           columns={columns}
           bordered
@@ -279,7 +285,7 @@ function CourseManage() {
         onCancel={handleCancel}
         editData={editData}
       />
-    </>
+    </DevLayout>
   );
 }
 
