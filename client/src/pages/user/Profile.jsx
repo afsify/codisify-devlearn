@@ -174,7 +174,7 @@ function Profile() {
               <p className="text-lg text-gray-300">{userData?.email}</p>
             </div>
             <div className="mt-4">
-              <label className="text-md font-medium">Email</label>
+              <label className="text-md font-medium">E-mail</label>
               <Input
                 size="large"
                 value={userData?.email}
